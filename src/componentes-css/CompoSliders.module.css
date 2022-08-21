@@ -1,0 +1,31 @@
+.contenedor {
+    width: 100%;
+    padding: 4rem 1rem; 
+}
+
+.slider {
+    border-radius: 0.9rem;
+    width: 90%;
+    height: 360px;
+}
+
+.imagen {
+    border-radius: 0.9rem;
+    width: 100%;
+    height: 78%;
+    position: relative;
+    user-select: none;
+}
+ .slider p {
+    width: 100%;
+    height: 22%;
+ }
+.imagen:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}

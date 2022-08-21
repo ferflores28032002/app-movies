@@ -1,0 +1,33 @@
+:root {
+    --letras: rgba(255,255,255,1);
+}
+
+.contenedor {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1.7rem 4.6rem;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.contenedor_logo h5 {
+    color: var(--letras);
+    font-size: 1.8rem;
+}
+.contenedor_logo i {
+    color: #ff0000;
+}
+
+
+.contenedor_menus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.1rem;
+    color: var(--letras);
+    font-size: 1.2rem;
+}
