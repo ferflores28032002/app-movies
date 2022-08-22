@@ -1,12 +1,12 @@
 .contenedor {
     width: 100%;
-    padding: 4rem 1rem; 
+    padding: 1.1rem 1rem; 
 }
 
 .slider {
     border-radius: 0.9rem;
     width: 90%;
-    height: 360px;
+    height: 330px;
 }
 
 .imagen {
@@ -16,9 +16,13 @@
     position: relative;
     user-select: none;
 }
- .slider p {
+.slider p {
     width: 100%;
     height: 22%;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 0.6rem;
  }
 .imagen:hover::after {
     content: '';
@@ -28,4 +32,18 @@
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.4);
+}
+.presentacion {
+    color: #ffffff;
+    padding: 1rem 4.6rem;
+    font-weight: bold;
+}
+
+
+@media(max-width: 800px){
+    .presentacion {
+        padding: 1.3rem ;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
 }

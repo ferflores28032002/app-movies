@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
-import {
-  Pagination,
-  Autoplay,
-  EffectFade,
-  Navigation
-} from "swiper";
+import { Pagination, Autoplay, EffectFade, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/bundle";
 import styles from "../componentes-css/HeaderSlider.module.css";
-import Api from './Api';
-import Loading from './Loading'
+import Api from "./Api";
+import Loading from "./Loading";
 
 function HeaderSlider() {
   const [movieSlide, setMovieSlide] = useState([]);
@@ -25,10 +20,9 @@ function HeaderSlider() {
     });
   }, []);
 
-
   const imagen = "https://image.tmdb.org/t/p/original/";
-  if(isloading){
-    return <Loading />
+  if (isloading) {
+    return <Loading />;
   }
 
   return (
@@ -51,7 +45,11 @@ function HeaderSlider() {
             <div className={styles.caja_informacion}>
               <h4>{slide.title}</h4>
               <p>{slide.overview}</p>
-              <Link to={'/movies/' + slide.id}><button className={styles.boton}>Ver Info</button></Link>
+              <Link to={"/movies/" + slide.id}>
+                <button className={styles.boton}>
+                  <i className="fa-solid fa-play"></i> Ver Info
+                </button>
+              </Link>
             </div>
           </SwiperSlide>
         </div>

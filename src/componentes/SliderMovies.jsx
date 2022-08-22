@@ -11,6 +11,6 @@ export const SliderMovies = () => {
   }, []);
 
   return (
-    <CompoSliders pelicula={SliderMovie}/>
+    <CompoSliders pelicula={SliderMovie} presentacion='Peliculas Populares de Anime' />
   );
 };

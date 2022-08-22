@@ -11,6 +11,6 @@ export const SliderCines = () => {
   }, []);
 
   return (
-    <CompoSliders pelicula={cines}/>
+    <CompoSliders pelicula={cines} presentacion='Mejores peliculas del 2021-2022'/>
   );
 };

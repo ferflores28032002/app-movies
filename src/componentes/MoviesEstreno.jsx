@@ -11,6 +11,6 @@ export const MoviesEstreno = () => {
   }, []);
 
   return (
-    <CompoSliders pelicula={MovieEstrenos}/>
+    <CompoSliders pelicula={MovieEstrenos} presentacion='Peliculas más populares del 2022' />
   );
 };
