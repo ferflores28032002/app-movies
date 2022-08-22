@@ -29,16 +29,14 @@
     left: 0;
     top: 0;
     background: linear-gradient(to top, 
-    rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%,  rgba(0,0,0,0.5) 100%);
+    rgba(0,0,0,1) 0%, rgba(0,0,0,1) 20%,  rgba(0,0,0,0.5) 100%);
 } 
 
-.caja-slider h1 {
+.caja-slider h1  {
     z-index: 999;
     font-size: 4rem;
     font-weight: bold;
 }
-
-
 
 .img-sliders {
     width: 100%;
@@ -51,4 +49,14 @@
     width: 90%; 
     height: 20rem;
     /* padding: 3rem; */
+}
+
+
+@media (max-width: 800px){
+    .caja-slider h1 {
+        font-size: 2rem;
+    }
+    .caja-slider {
+        padding-left: 1.3rem;
+    }
 }

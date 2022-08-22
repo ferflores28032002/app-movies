@@ -1,12 +1,12 @@
-import React from 'react'
-import { SwipersThumdnails } from '../componentes/SwipersThumdnails'
-import Header from '../componentes/Header';
+import React from "react";
+import CompoThumbnails from "../componentes/CompoThumbnails";
+import Header from "../componentes/Header";
 
 export const List = () => {
   return (
     <>
-        <Header/>
-        <SwipersThumdnails/>
+      <Header />
+      <CompoThumbnails />
     </>
-  )
-}
+  );
+};

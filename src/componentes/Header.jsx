@@ -14,6 +14,10 @@ const Header = () => {
     setToggle(!toggle);
   };
 
+  const quitarMenu = () => {
+    setToggle(true);
+  };
+
   return (
     <div className={styles.contenedor} id="contenedor-principal">
       <div className={styles.contenedor_logo}>
@@ -31,14 +35,17 @@ const Header = () => {
             <i className="fa-solid fa-xmark"></i>
           )}
         </li>
-        <Link to={"/"}>
+        <Link onClick={quitarMenu} to={"/"}>
           <li>Home</li>
         </Link>
-        <Link to={"/list"}>
+        <Link onClick={quitarMenu} to={"/list"}>
           <li>Tv List</li>
         </Link>
-        <Link to={"/"}>
+        <Link onClick={quitarMenu} to={"/"}>
           <li>Others</li>
+        </Link>
+        <Link onClick={quitarMenu} to={"/"}>
+          <li><i className="fa-solid fa-magnifying-glass"></i></li>
         </Link>
       </ul>
     </div>
