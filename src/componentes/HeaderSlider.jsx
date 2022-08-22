@@ -5,6 +5,7 @@ import {
   Pagination,
   Autoplay,
   EffectFade,
+  Navigation
 } from "swiper";
 import "swiper/css";
 import "swiper/css/bundle";
@@ -34,9 +35,10 @@ function HeaderSlider() {
     <Swiper
       className={styles.contenedor_slide}
       loop
-      modules={[Pagination, Autoplay, EffectFade]}
-      pagination
-      autoplay
+      modules={[Pagination, Autoplay, EffectFade, Navigation]}
+      pagination={true}
+      navigation
+      // autoplay
       effect="fade"
     >
       {movieSlide.map((slide) => (

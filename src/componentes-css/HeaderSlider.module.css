@@ -64,3 +64,18 @@
         box-shadow: 0 0 0 0 rgb(255, 193, 7, 0);
     }
 }
+
+
+@media (max-width: 800px) {
+    .sliders {
+        padding: 0px 1rem;
+    }
+    .caja_informacion {
+        max-width: 100%;
+        text-align: justify;
+    }
+    
+    .caja_informacion h4 {
+        font-size: 2.7rem;
+    }
+}

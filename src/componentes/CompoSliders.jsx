@@ -15,14 +15,7 @@ export const CompoSliders = ({pelicula}) => {
         <Swiper
             loop={true}
             className={styles.slider}
-            modules={[
-            Navigation,
-            Pagination,
-            Scrollbar,
-            A11y,
-            Autoplay,
-            EffectFade,
-            ]}
+            modules={[Navigation,Pagination,Scrollbar,A11y,Autoplay,EffectFade,]}
             navigation={true}
             pagination={true}
             // autoplay={{ delay: 500 }}
@@ -32,7 +25,7 @@ export const CompoSliders = ({pelicula}) => {
             breakpoints={{
             0: {
                 spaceBetween: 10,
-                slidesPerView: 1,
+                slidesPerView: 2,
             },
             480: {
                 spaceBetween: 10,

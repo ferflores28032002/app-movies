@@ -19,8 +19,8 @@ const Header = () => {
       </div>
       <ul className={styles.contenedor_menus}>
         <Link to={'/'}><li>Home</li></Link>
-        <li>Movies</li>
-        <li>Tv List</li>
+        <Link to={'/list'}><li>Tv List</li></Link>
+        {/* <li>Tv List</li> */}
         <li>Others</li>
       </ul>
     </div>
