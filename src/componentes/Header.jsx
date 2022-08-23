@@ -41,8 +41,8 @@ const Header = () => {
         <Link onClick={quitarMenu} to={"/list"}>
           <li>Tv List</li>
         </Link>
-        <Link onClick={quitarMenu} to={"/"}>
-          <li>Others</li>
+        <Link onClick={quitarMenu} to={"/types"}>
+          <li>Types</li>
         </Link>
         <Link onClick={quitarMenu} to={"/"}>
           <li><i className="fa-solid fa-magnifying-glass"></i></li>

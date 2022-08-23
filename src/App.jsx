@@ -4,6 +4,7 @@ import "./componentes-css/App.css";
 import { List } from "./pages/List";
 import Movies from "./pages/Movies";
 import Principal from "./pages/Principal";
+import { Types } from "./pages/Types";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Principal />} ></Route>
           <Route path="/movies/:id" element={<Movies/>} ></Route>
           <Route path="/list" element={<List/>} ></Route>
+          <Route path="/types" element={<Types/>} ></Route>
         </Routes>
       </BrowserRouter>
     </div>
