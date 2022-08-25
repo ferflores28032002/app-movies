@@ -19,7 +19,7 @@ const Principal = () => {
       <ThumdnailsAction />
       <SliderMovies />
       <ThumdnailsMovies />
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 };

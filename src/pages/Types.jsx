@@ -10,7 +10,7 @@ export const Types = () => {
     <>  
       <Header/>
       <MoviesTypes/>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   )
 }
