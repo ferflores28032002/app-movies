@@ -45,7 +45,7 @@ function HeaderSlider() {
               <p>{slide.overview}</p>
               <Link to={"/movies/" + slide.id}>
                 <button className={styles.boton}>
-                  <i className="fa-solid fa-play"></i> Ver Info
+                  <i className="fa-solid fa-play"></i><span>  Watch now</span>
                 </button>
               </Link>
             </div>

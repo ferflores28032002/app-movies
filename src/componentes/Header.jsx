@@ -23,7 +23,7 @@ const Header = () => {
       <div className={styles.contenedor_logo}>
         <Link to={"/"}>
           <h5>
-            <i className="fa-solid fa-video"></i> MovieDB
+            <i className="fa-solid fa-video"></i><span>  MovieDB</span>
           </h5>
         </Link>
       </div>
@@ -36,7 +36,7 @@ const Header = () => {
           )}
         </li>
         <Link onClick={quitarMenu} to={"/"}>
-          <li>Home</li>
+          <li className={styles.actives} >Home</li>
         </Link>
         <Link onClick={quitarMenu} to={"/list"}>
           <li>Tv List</li>

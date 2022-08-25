@@ -7,7 +7,7 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding:1.7rem 4.6rem;
+    padding:1.6rem 4.6rem;
     z-index: 10001;
     position: fixed;
     left: 0;
@@ -16,7 +16,7 @@
 
 .contenedor_logo h5 {
     color: var(--letras);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 .contenedor_logo i {
@@ -29,9 +29,14 @@
     justify-content: center;
     align-items: center;
     gap: 2.1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: var(--letras);
+}
+
+.contenedor_menus .actives {
+
+    border-bottom: 4px solid #ff0000;
 }
 
 ul.contenedor_menus .btn {

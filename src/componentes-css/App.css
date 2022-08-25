@@ -11,7 +11,7 @@
 
 #contenedor-principal.active  {
     background: #000000 !important;
-    transition: 1s ease;
+    transition: .7s ease;
 }
 
 html,
