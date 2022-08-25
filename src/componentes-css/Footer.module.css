@@ -1,0 +1,43 @@
+.container {
+    margin-top: 5rem;
+    width: 100%;
+    background-size: cover;
+    /* position: relative; */
+}
+
+.contenedor{
+    padding: 2rem 3.5rem;
+    position: relative;
+    width: 100%;
+}
+
+
+.contenedor::after {
+    content: '';
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to top, 
+                                         rgba(0,0,0,1) 0%, 
+                                        rgba(0,0,0,1) 30%, 
+                                        rgba(0,0,0,0.3) 80%, 
+                                         rgba(0,0,0,1) 100%);
+} 
+
+.cajainfo{
+    margin-top: 2rem;
+    color: #ffffff;
+}
+
+.cajainfo .contactanos {
+    z-index: 99999;
+    width: 100%;
+    padding: 2rem 0;
+}
+.cajaul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}

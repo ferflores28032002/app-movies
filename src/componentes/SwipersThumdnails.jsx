@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs, EffectFade, Autoplay } from "swiper";
 import "swiper/css/bundle";
-import "../componentes-css/SwipersThumdnails.css";
+import estilos from "../componentes-css/SwipersThumdnails.module.css";
+import placeholder from "../imagenes-logo/placeholder.jpg";
 
 export const SwipersThumdnails = ({ movies }) => {
   const [movimiento, setMovimiento] = useState();
@@ -12,9 +13,9 @@ export const SwipersThumdnails = ({ movies }) => {
   const imagenOriginal = "https://image.tmdb.org/t/p/original/";
 
   return (
-    <div className="contenedor">
+    <div className={estilos.contenedor}>
       <Swiper
-        className="slider1"
+        className={estilos.slider1}
         loop={true}
         modules={[Navigation, Thumbs, EffectFade, Autoplay]}
         thumbs={{ swiper: movimiento }}
@@ -24,7 +25,7 @@ export const SwipersThumdnails = ({ movies }) => {
         {movies.map((peliculas) => (
           <SwiperSlide key={peliculas.id}>
             <div
-              className="caja-slider"
+              className={estilos.caja_slider}
               style={{
                 backgroundImage: `url(${
                   imagenOriginal + peliculas.backdrop_path
@@ -40,7 +41,7 @@ export const SwipersThumdnails = ({ movies }) => {
       </Swiper>
 
       <Swiper
-        className="contenedor-22"
+        className={estilos.contenedor_22}
         loop={true}
         onSwiper={setMovimiento}
         breakpoints={{
@@ -62,16 +63,20 @@ export const SwipersThumdnails = ({ movies }) => {
           },
           1280: {
             spaceBetween: 10,
-            slidesPerView: 8,
+            slidesPerView: 7,
           },
         }}
       >
         {movies.map((peliculas) => (
           <SwiperSlide key={peliculas.id}>
             <img
-              src={url + peliculas.poster_path}
+              src={
+                peliculas.poster_path
+                  ? url + peliculas.poster_path
+                  : placeholder
+              }
               alt={peliculas.title}
-              className="img-sliders"
+              className={estilos.img_sliders}
             />
           </SwiperSlide>
         ))}

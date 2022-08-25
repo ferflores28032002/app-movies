@@ -6,6 +6,7 @@ import { SliderMovies } from "../componentes/SliderMovies";
 import ThumdnailsMovies from "../componentes/ThumdnailsMovies";
 import ThumdnailsSeries from "../componentes/ThumdnailsSeries";
 import ThumdnailsAction from "../componentes/ThumdnailsAction";
+import Footer from "../componentes/Footer";
 
 const Principal = () => {
   return (
@@ -18,6 +19,7 @@ const Principal = () => {
       <ThumdnailsAction />
       <SliderMovies />
       <ThumdnailsMovies />
+      <Footer/>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
-import { Pagination, Autoplay, EffectFade, Navigation } from "swiper";
+import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/bundle";
 import styles from "../componentes-css/HeaderSlider.module.css";
@@ -29,11 +29,9 @@ function HeaderSlider() {
     <Swiper
       className={styles.contenedor_slide}
       loop
-      modules={[Pagination, Autoplay, EffectFade, Navigation]}
+      modules={[Pagination, Autoplay, Navigation]}
       pagination={true}
       navigation
-      // autoplay
-      effect="fade"
     >
       {movieSlide.map((slide) => (
         <div key={slide.id}>

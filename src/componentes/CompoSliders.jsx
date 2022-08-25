@@ -4,13 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/bundle";
 import styles from "../componentes-css/CompoSliders.module.css";
+import placeholder from "../imagenes-logo/placeholder.jpg";
 
 export const CompoSliders = ({ pelicula, presentacion }) => {
   const url = "https://image.tmdb.org/t/p/w300";
 
   return (
     <div className={styles.contenedor}>
-        <h4 className={styles.presentacion}>{presentacion}</h4>
+      <h4 className={styles.presentacion}>{presentacion}</h4>
       <Swiper
         loop={true}
         className={styles.slider}
@@ -42,7 +43,11 @@ export const CompoSliders = ({ pelicula, presentacion }) => {
             <Link to={"/movies/" + pelicula.id}>
               <img
                 className={styles.imagen}
-                src={url + pelicula.poster_path}
+                src={
+                  pelicula.poster_path
+                    ? url + pelicula.poster_path
+                    : placeholder
+                }
                 alt={pelicula.title}
               />
               <p>{pelicula.title}</p>
