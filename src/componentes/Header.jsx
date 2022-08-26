@@ -48,7 +48,7 @@ const Header = () => {
           <li>Discover Tv</li>
         </Link>
         <Link onClick={quitarMenu} to={"/types"}>
-          <li><i className="fa-solid fa-magnifying-glass"></i></li>
+          <li className={styles.searchMovies} ><i className="fa-solid fa-magnifying-glass"></i></li>
         </Link>
       </ul>
     </div>

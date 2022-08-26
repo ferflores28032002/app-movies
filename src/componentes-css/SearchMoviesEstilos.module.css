@@ -140,3 +140,15 @@ input {
     }
 
 }
+
+
+@media (max-width: 395px){
+    .peliculas {
+        grid-template-columns: repeat(auto-fill, 150px);
+        padding: 3rem 0.5rem  2rem 0.5rem;
+    }
+    
+    .peliculas li {
+        height: 300px;
+    }
+}
