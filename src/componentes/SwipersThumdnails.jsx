@@ -6,7 +6,7 @@ import "swiper/css/bundle";
 import estilos from "../componentes-css/SwipersThumdnails.module.css";
 import placeholder from "../imagenes-logo/placeholder.jpg";
 
-export const SwipersThumdnails = ({ movies }) => {
+export const SwipersThumdnails = ({ movies, ruta }) => {
   const [movimiento, setMovimiento] = useState();
 
   const url = "https://image.tmdb.org/t/p/w300";
@@ -33,7 +33,7 @@ export const SwipersThumdnails = ({ movies }) => {
               }}
             >
               <h1>
-                <Link to={"/movies/" + peliculas.id}>{peliculas.title}</Link>
+                <Link to={`/${ruta}/` + peliculas.id}>{peliculas.title ? peliculas.title : peliculas.name}</Link>
               </h1>
             </div>
           </SwiperSlide>
@@ -75,7 +75,7 @@ export const SwipersThumdnails = ({ movies }) => {
                   ? url + peliculas.poster_path
                   : placeholder
               }
-              alt={peliculas.title}
+              alt={peliculas.title ? peliculas.title : peliculas.name}
               className={estilos.img_sliders}
             />
           </SwiperSlide>

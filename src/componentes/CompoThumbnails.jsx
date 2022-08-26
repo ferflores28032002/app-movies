@@ -21,6 +21,6 @@ const CompoThumbnails = () => {
     return <Loading />;
   }
 
-  return <SwipersThumdnails movies={movies} />;
+  return <SwipersThumdnails movies={movies} ruta='movies' />;
 };
 export default CompoThumbnails;

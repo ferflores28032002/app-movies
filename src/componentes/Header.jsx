@@ -39,7 +39,13 @@ const Header = () => {
           <li className={styles.actives} >Home</li>
         </Link>
         <Link onClick={quitarMenu} to={"/list"}>
+          <li>Movie List</li>
+        </Link>
+        <Link onClick={quitarMenu} to={"/tv"}>
           <li>Tv List</li>
+        </Link>
+        <Link onClick={quitarMenu} to={"/tvList"}>
+          <li>Discover Tv</li>
         </Link>
         <Link onClick={quitarMenu} to={"/types"}>
           <li><i className="fa-solid fa-magnifying-glass"></i></li>
