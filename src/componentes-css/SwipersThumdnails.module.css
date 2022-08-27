@@ -44,6 +44,7 @@
     border-radius: 0.7rem;
     user-select: none;
     cursor: grab;
+    position: relative;
 }
 
 .contenedor_22 {

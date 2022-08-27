@@ -2,6 +2,15 @@
     --body:#000;
 }
 
+::-webkit-scrollbar{
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ff0000;
+    border-radius: 4rem;
+}
+
 * {
     margin: 0px;
     padding: 0px;

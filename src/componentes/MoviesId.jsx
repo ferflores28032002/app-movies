@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import SearchMovieId from "./SearchMovieId";
 import styles from '../componentes-css/MoviesId.module.css';
 import Loading from './Loading';
+import placeholder from '../imagenes-logo/placeholder.jpg';
 
 const MoviesId = () => {
   const { id } = useParams();
@@ -48,7 +49,7 @@ const MoviesId = () => {
 
         <div className={styles.caja}>
           <div className={styles.logo}>
-            <img src={imgs + movie.poster_path} alt={movie.title} />
+            <img src={movie.poster_path ? imgs + movie.poster_path : placeholder} alt={movie.title} />
           </div>
           <div className={styles.informacion}>
             <h1>{movie.title}</h1>

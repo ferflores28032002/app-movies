@@ -1,0 +1,127 @@
+.tv{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    padding: 3rem 4.6rem;
+    grid-template-columns: repeat(auto-fill, 290px);
+    gap: 0.7rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    width: 100%;
+    padding: 0rem 4.6rem;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.titulo span {
+    color: #ff0000;
+}
+
+.tv .peliculas {
+    height: 420px;
+    position: relative;
+}
+
+.tv .peliculas img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+}
+
+.peliculas::after {
+    content: '';
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to top, 
+    rgba(0,0,0,1) 0%, rgba(0,0,0,1) 20%,  rgba(0,0,0,0.1) 100%);
+}
+
+.tv .peliculas .name {
+    position: absolute;
+    z-index: 999;
+    bottom: 3%;
+    left: 1.1%;
+    color: #ffffff;
+    font-size: 1.2rem;
+    width: 65%;
+    font-weight: bold;
+}
+.tv .peliculas .boton{
+    position: absolute;
+    bottom: 4%;
+    right: 3%;
+    z-index: 9999;
+}
+
+.tv .peliculas .boton i {
+    color: #ffffff;
+    padding: 1.2rem 1.2rem;
+    background-color: #ff0000;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        box-shadow: 0 0 0 0 #ff0000;
+    }
+    40%{
+        box-shadow: 0 0 0 30px  rgb(255, 193, 7, 0);
+    }
+    80%{
+        box-shadow: 0 0 0 20px rgb(255, 193, 7, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgb(255, 193, 7, 0);
+    }
+}
+
+@media (max-width: 800px){
+    .tv{
+        padding: 2rem 1rem;
+        grid-template-columns: repeat(auto-fill, 180px);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .titulo {
+        padding: 0rem 1rem;
+        font-size: 1.3rem;
+    }
+    
+    .titulo span {
+        color: #ff0000;
+    }
+    
+    .tv .peliculas {
+        height: 330px;
+    }
+
+    
+    .tv .peliculas .name {
+        font-size: 1rem;
+    }
+    
+    .tv .peliculas .boton i {
+        padding: 1.1rem 1.1rem;
+    }
+}
+
+@media (max-width: 395px){
+    .tv{
+        grid-template-columns: repeat(auto-fill, 140px);
+        justify-content: center;
+        align-items: center;
+    } 
+    
+    .tv .peliculas {
+        height: 300px;
+    }
+}

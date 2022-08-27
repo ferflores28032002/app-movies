@@ -19,7 +19,7 @@ export const SwipersThumdnails = ({ movies, ruta }) => {
         loop={true}
         modules={[Navigation, Thumbs, EffectFade, Autoplay]}
         thumbs={{ swiper: movimiento }}
-        effect="fade"
+        // effect="fade"
         autoplay={{ delay: 1200 }}
       >
         {movies.map((peliculas) => (
