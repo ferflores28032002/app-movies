@@ -49,7 +49,7 @@ const MoviesId = () => {
 
         <div className={styles.caja}>
           <div className={styles.logo}>
-            <img src={movie.poster_path ? imgs + movie.poster_path : placeholder} alt={movie.title} />
+            <img loading='lazy' src={movie.poster_path ? imgs + movie.poster_path : placeholder} alt={movie.title} />
           </div>
           <div className={styles.informacion}>
             <h1>{movie.title}</h1>

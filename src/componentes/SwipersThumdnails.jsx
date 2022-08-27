@@ -70,6 +70,7 @@ export const SwipersThumdnails = ({ movies, ruta }) => {
         {movies.map((peliculas) => (
           <SwiperSlide key={peliculas.id}>
             <img
+              loading='lazy'
               src={
                 peliculas.poster_path
                   ? url + peliculas.poster_path

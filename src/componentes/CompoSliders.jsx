@@ -42,6 +42,7 @@ export const CompoSliders = ({ pelicula, presentacion }) => {
           <SwiperSlide key={pelicula.id}>
             <Link to={"/movies/" + pelicula.id}>
               <img
+                  loading="lazy"
                 className={styles.imagen}
                 src={
                   pelicula.poster_path

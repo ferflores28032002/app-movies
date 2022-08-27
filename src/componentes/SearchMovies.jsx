@@ -62,7 +62,7 @@ export const SearchMovies = () => {
       <ul className={style.peliculas}>
         {movies.map((movie) => (
             <li key={movie.id}>
-              <img src={ movie.poster_path ? imagenOriginal + movie.poster_path : placeholder} alt={movie.title} />
+              <img loading="lazy" src={ movie.poster_path ? imagenOriginal + movie.poster_path : placeholder} alt={movie.title} />
               <h4>{movie.title}</h4>
               <Link to={"/movies/" + movie.id}>
                 <span>

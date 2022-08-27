@@ -44,6 +44,7 @@ export const TvList = () => {
         {movies.map((movie) => (
           <div key={movie.id} className={estilos.peliculas}>
             <img
+              loading="lazy"
               src={
                 movie.poster_path
                   ? imagenOriginal + movie.poster_path
