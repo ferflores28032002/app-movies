@@ -45,7 +45,7 @@ const Header = () => {
           <li>Tv List</li>
         </Link>
         <Link onClick={quitarMenu} to={"/tvList"}>
-          <li>Discover Tv</li>
+          <li>Discover TV</li>
         </Link>
         <Link onClick={quitarMenu} to={"/types"}>
           <li className={styles.searchMovies} ><i className="fa-solid fa-magnifying-glass"></i></li>
