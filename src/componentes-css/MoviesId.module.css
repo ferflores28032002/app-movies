@@ -29,6 +29,9 @@
     display: flex;
     gap: 2rem;
 }
+.logo {
+    min-width: 16rem;
+}
 
 .logo img {
     height: 25rem;
@@ -39,6 +42,7 @@
 .informacion h1 {
     font-size: 3.1rem;
     padding-bottom: 1rem;
+    font-weight: bold;
 }
 .informacion p {
     margin-top: 1.7rem;
@@ -54,20 +58,83 @@
 
 .genres {
     font-size: 1.1rem;
-    padding: 0.6rem 1.3rem;
+    padding: 0.3rem 1.2rem;
     border-radius: 2rem;
     border: 2px solid #ffff;
 }
 
 .videos {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, 400px);
-    gap: 1rem;
+    gap:2rem;
     justify-content: center;
-    padding: 2rem;
+    align-items: center;
+    padding-bottom: 4rem;
 }
 
 .videos iframe {
-    height: 320px;
+    width: 90%;
+    height: 80vh;
+}
+
+
+
+@media (max-width: 800px){
+    .contenedor {
+        background-position: center center;
+    
+    }
+    
+    .caja {
+        /* padding-top: 3rem; */
+        width: 90%;
+        z-index: 999;
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center ;
+        min-height: 100vh;
+    }
+    .logo {
+        display: none;
+    }
+    
+    .informacion {
+        text-align: center;
+    }
+    
+    
+    .informacion h1 {
+        font-size: 2.1rem;
+        font-weight: bold;
+    }
+    .informacion p {
+        margin-top: 1.7rem;
+        text-align: justify;
+        font-size: 1rem;
+    }
+    
+    .caja_genres {
+        gap: 0.2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .genres {
+        font-size: 1rem;
+        padding: 0.2rem 1.1rem;
+    }
+    
+    .videos {
+        gap:1rem;
+    }
+    
+    .videos iframe {
+        height: 300px;
+    }
+    
 }

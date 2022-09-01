@@ -9,7 +9,7 @@ const MoviesId = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [isloading, setIsloading] = useState(true);
-  // const [video, setVideo] = useState([]);
+  const [video, setVideo] = useState([]);
 
   useEffect(()=>{
     setIsloading(true);
@@ -18,27 +18,26 @@ const MoviesId = () => {
     setIsloading(false);
   },[id])
 
-  if(isloading){
-    return <Loading />
-  }
+  useEffect(()=>{
+    // setIsLoading(true);
+    fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=a8bf047869d000586a3eb83df8fa3819&language=en-US`)
+    .then((results) => results.json())
+    .then((data) => {
+      setVideo(data.results)
+    })
 
-
-  // useEffect(()=>{
-  //   setIsLoading(true);
-  //   fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=a8bf047869d000586a3eb83df8fa3819&language=en-US`)
-  //   .then((results) => results.json())
-  //   .then((data) => {
-  //     setVideo(data.results)
-  //   })
-
-  //   setIsLoading(false);
-  // }, [id])
-  // const peliculas = video.slice(0,3);
+    // setIsLoading(false);
+  }, [id])
+  const peliculas = video.slice(0,3);
   
   
   if(!movie){
     return null;
   }
+  if(isloading){
+    return <Loading />
+  }
+
 
   const imgs = "https://image.tmdb.org/t/p/w300";
   const imagenOriginal = "https://image.tmdb.org/t/p/original/";
@@ -66,7 +65,7 @@ const MoviesId = () => {
 
       </div>
 
-      {/* <div className={styles.videos}>
+      <div className={styles.videos}>
         {
           peliculas.map((peli)=> (
             <iframe key={peli.id} src={`https://www.youtube.com/embed/${peli.key}`}
@@ -78,7 +77,7 @@ const MoviesId = () => {
           ))
         }
 
-      </div> */}
+      </div>
     </div>
   );
 };
